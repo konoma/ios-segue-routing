@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6357D3FB19C4940C009FDA6D /* segue_routing.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6357D3FA19C4940C009FDA6D /* segue_routing.h */; };
-		6357D3FD19C4940C009FDA6D /* segue_routing.m in Sources */ = {isa = PBXBuildFile; fileRef = 6357D3FC19C4940C009FDA6D /* segue_routing.m */; };
+		6351A38E19C496E60032C4E9 /* UIViewController+KNMSegueRouting.m in Sources */ = {isa = PBXBuildFile; fileRef = 6351A38D19C496E60032C4E9 /* UIViewController+KNMSegueRouting.m */; };
+		6351A39019C4A2120032C4E9 /* KNMSegueRoutingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6351A38F19C4A2120032C4E9 /* KNMSegueRoutingTests.m */; };
+		6351A39319C4A3090032C4E9 /* KNMEnabledTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6351A39219C4A3090032C4E9 /* KNMEnabledTestViewController.m */; };
+		6351A39719C4A4930032C4E9 /* KNMSegueCall.m in Sources */ = {isa = PBXBuildFile; fileRef = 6351A39619C4A4930032C4E9 /* KNMSegueCall.m */; };
+		6351A39A19C4A5220032C4E9 /* KNMTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6351A39919C4A5220032C4E9 /* KNMTestViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -18,18 +21,25 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
-				6357D3FB19C4940C009FDA6D /* segue_routing.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		6351A38C19C496E60032C4E9 /* UIViewController+KNMSegueRouting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+KNMSegueRouting.h"; sourceTree = "<group>"; };
+		6351A38D19C496E60032C4E9 /* UIViewController+KNMSegueRouting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+KNMSegueRouting.m"; sourceTree = "<group>"; };
+		6351A38F19C4A2120032C4E9 /* KNMSegueRoutingTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KNMSegueRoutingTests.m; sourceTree = "<group>"; };
+		6351A39119C4A3090032C4E9 /* KNMEnabledTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KNMEnabledTestViewController.h; sourceTree = "<group>"; };
+		6351A39219C4A3090032C4E9 /* KNMEnabledTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KNMEnabledTestViewController.m; sourceTree = "<group>"; };
+		6351A39519C4A4930032C4E9 /* KNMSegueCall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KNMSegueCall.h; sourceTree = "<group>"; };
+		6351A39619C4A4930032C4E9 /* KNMSegueCall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KNMSegueCall.m; sourceTree = "<group>"; };
+		6351A39819C4A5220032C4E9 /* KNMTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KNMTestViewController.h; sourceTree = "<group>"; };
+		6351A39919C4A5220032C4E9 /* KNMTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KNMTestViewController.m; sourceTree = "<group>"; };
 		6357D3F719C4940C009FDA6D /* libsegue-routing.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libsegue-routing.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6357D3FA19C4940C009FDA6D /* segue_routing.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = segue_routing.h; sourceTree = "<group>"; };
-		6357D3FC19C4940C009FDA6D /* segue_routing.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = segue_routing.m; sourceTree = "<group>"; };
-		6357D40219C4940C009FDA6D /* segue-routingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "segue-routingTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6357D40219C4940C009FDA6D /* segue-routing-tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "segue-routing-tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6357D40519C4940C009FDA6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		63A0C5BF19C494760008EF56 /* SegueRouting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SegueRouting.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,11 +60,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6351A39419C4A31A0032C4E9 /* Helper Classes */ = {
+			isa = PBXGroup;
+			children = (
+				6351A39519C4A4930032C4E9 /* KNMSegueCall.h */,
+				6351A39619C4A4930032C4E9 /* KNMSegueCall.m */,
+				6351A39819C4A5220032C4E9 /* KNMTestViewController.h */,
+				6351A39919C4A5220032C4E9 /* KNMTestViewController.m */,
+				6351A39119C4A3090032C4E9 /* KNMEnabledTestViewController.h */,
+				6351A39219C4A3090032C4E9 /* KNMEnabledTestViewController.m */,
+			);
+			name = "Helper Classes";
+			sourceTree = "<group>";
+		};
 		6357D3EE19C4940B009FDA6D = {
 			isa = PBXGroup;
 			children = (
-				6357D3F919C4940C009FDA6D /* segue-routing */,
-				6357D40319C4940C009FDA6D /* segue-routingTests */,
+				6357D3F919C4940C009FDA6D /* Sources */,
+				6357D40319C4940C009FDA6D /* Tests */,
 				6357D3F819C4940C009FDA6D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -63,34 +86,29 @@
 			isa = PBXGroup;
 			children = (
 				6357D3F719C4940C009FDA6D /* libsegue-routing.a */,
-				6357D40219C4940C009FDA6D /* segue-routingTests.xctest */,
+				6357D40219C4940C009FDA6D /* segue-routing-tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		6357D3F919C4940C009FDA6D /* segue-routing */ = {
+		6357D3F919C4940C009FDA6D /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				6357D3FA19C4940C009FDA6D /* segue_routing.h */,
-				6357D3FC19C4940C009FDA6D /* segue_routing.m */,
+				63A0C5BF19C494760008EF56 /* SegueRouting.h */,
+				6351A38C19C496E60032C4E9 /* UIViewController+KNMSegueRouting.h */,
+				6351A38D19C496E60032C4E9 /* UIViewController+KNMSegueRouting.m */,
 			);
-			path = "segue-routing";
+			path = Sources;
 			sourceTree = "<group>";
 		};
-		6357D40319C4940C009FDA6D /* segue-routingTests */ = {
-			isa = PBXGroup;
-			children = (
-				6357D40419C4940C009FDA6D /* Supporting Files */,
-			);
-			path = "segue-routingTests";
-			sourceTree = "<group>";
-		};
-		6357D40419C4940C009FDA6D /* Supporting Files */ = {
+		6357D40319C4940C009FDA6D /* Tests */ = {
 			isa = PBXGroup;
 			children = (
 				6357D40519C4940C009FDA6D /* Info.plist */,
+				6351A38F19C4A2120032C4E9 /* KNMSegueRoutingTests.m */,
+				6351A39419C4A31A0032C4E9 /* Helper Classes */,
 			);
-			name = "Supporting Files";
+			path = Tests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -113,9 +131,9 @@
 			productReference = 6357D3F719C4940C009FDA6D /* libsegue-routing.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		6357D40119C4940C009FDA6D /* segue-routingTests */ = {
+		6357D40119C4940C009FDA6D /* segue-routing-tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6357D40B19C4940C009FDA6D /* Build configuration list for PBXNativeTarget "segue-routingTests" */;
+			buildConfigurationList = 6357D40B19C4940C009FDA6D /* Build configuration list for PBXNativeTarget "segue-routing-tests" */;
 			buildPhases = (
 				6357D3FE19C4940C009FDA6D /* Sources */,
 				6357D3FF19C4940C009FDA6D /* Frameworks */,
@@ -125,9 +143,9 @@
 			);
 			dependencies = (
 			);
-			name = "segue-routingTests";
+			name = "segue-routing-tests";
 			productName = "segue-routingTests";
-			productReference = 6357D40219C4940C009FDA6D /* segue-routingTests.xctest */;
+			productReference = 6357D40219C4940C009FDA6D /* segue-routing-tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -136,6 +154,7 @@
 		6357D3EF19C4940B009FDA6D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = KNM;
 				LastUpgradeCheck = 0600;
 				ORGANIZATIONNAME = "konoma GmbH";
 				TargetAttributes = {
@@ -160,7 +179,7 @@
 			projectRoot = "";
 			targets = (
 				6357D3F619C4940C009FDA6D /* segue-routing */,
-				6357D40119C4940C009FDA6D /* segue-routingTests */,
+				6357D40119C4940C009FDA6D /* segue-routing-tests */,
 			);
 		};
 /* End PBXProject section */
@@ -180,7 +199,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6357D3FD19C4940C009FDA6D /* segue_routing.m in Sources */,
+				6351A38E19C496E60032C4E9 /* UIViewController+KNMSegueRouting.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,6 +207,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6351A39019C4A2120032C4E9 /* KNMSegueRoutingTests.m in Sources */,
+				6351A39719C4A4930032C4E9 /* KNMSegueCall.m in Sources */,
+				6351A39319C4A3090032C4E9 /* KNMEnabledTestViewController.m in Sources */,
+				6351A39A19C4A5220032C4E9 /* KNMTestViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,7 +320,7 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "segue-routingTests/Info.plist";
+				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -310,7 +333,7 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "segue-routingTests/Info.plist";
+				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -335,14 +358,16 @@
 				6357D40A19C4940C009FDA6D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		6357D40B19C4940C009FDA6D /* Build configuration list for PBXNativeTarget "segue-routingTests" */ = {
+		6357D40B19C4940C009FDA6D /* Build configuration list for PBXNativeTarget "segue-routing-tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6357D40C19C4940C009FDA6D /* Debug */,
 				6357D40D19C4940C009FDA6D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
