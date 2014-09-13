@@ -23,7 +23,7 @@
 
 - (NSUInteger)hash
 {
-    return ((NSUInteger)self.selector ^ self.segue.hash ^ [self.sender hash]);
+    return ((NSUInteger)(void *)self.selector ^ self.segue.hash ^ [self.sender hash]);
 }
 
 - (BOOL)isEqual:(id)object

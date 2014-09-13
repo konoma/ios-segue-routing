@@ -20,6 +20,20 @@
                ReferencedContainer = "container:segue-routing.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "6357D40119C4940C009FDA6D"
+               BuildableName = "segue-routing-tests.xctest"
+               BlueprintName = "segue-routing-tests"
+               ReferencedContainer = "container:segue-routing.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -28,7 +42,26 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "6357D40119C4940C009FDA6D"
+               BuildableName = "segue-routing-tests.xctest"
+               BlueprintName = "segue-routing-tests"
+               ReferencedContainer = "container:segue-routing.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "6357D3F619C4940C009FDA6D"
+            BuildableName = "libsegue-routing.a"
+            BlueprintName = "segue-routing"
+            ReferencedContainer = "container:segue-routing.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </TestAction>
    <LaunchAction
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"

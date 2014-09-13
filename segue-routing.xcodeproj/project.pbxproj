@@ -7,12 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6325181A19C4ED7A005460DC /* libsegue-routing.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6357D3F719C4940C009FDA6D /* libsegue-routing.a */; };
 		6351A38E19C496E60032C4E9 /* UIViewController+KNMSegueRouting.m in Sources */ = {isa = PBXBuildFile; fileRef = 6351A38D19C496E60032C4E9 /* UIViewController+KNMSegueRouting.m */; };
 		6351A39019C4A2120032C4E9 /* KNMSegueRoutingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6351A38F19C4A2120032C4E9 /* KNMSegueRoutingTests.m */; };
 		6351A39319C4A3090032C4E9 /* KNMEnabledTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6351A39219C4A3090032C4E9 /* KNMEnabledTestViewController.m */; };
 		6351A39719C4A4930032C4E9 /* KNMSegueCall.m in Sources */ = {isa = PBXBuildFile; fileRef = 6351A39619C4A4930032C4E9 /* KNMSegueCall.m */; };
 		6351A39A19C4A5220032C4E9 /* KNMTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6351A39919C4A5220032C4E9 /* KNMTestViewController.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6325181B19C4ED7F005460DC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6357D3EF19C4940B009FDA6D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6357D3F619C4940C009FDA6D;
+			remoteInfo = "segue-routing";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		6357D3F519C4940C009FDA6D /* CopyFiles */ = {
@@ -54,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6325181A19C4ED7A005460DC /* libsegue-routing.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,6 +154,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				6325181C19C4ED7F005460DC /* PBXTargetDependency */,
 			);
 			name = "segue-routing-tests";
 			productName = "segue-routingTests";
@@ -215,6 +228,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6325181C19C4ED7F005460DC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6357D3F619C4940C009FDA6D /* segue-routing */;
+			targetProxy = 6325181B19C4ED7F005460DC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		6357D40619C4940C009FDA6D /* Debug */ = {
@@ -322,6 +343,12 @@
 				);
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					XCTest,
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -335,6 +362,12 @@
 				);
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					XCTest,
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

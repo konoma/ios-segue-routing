@@ -14,6 +14,12 @@
 
 @implementation KNMEnabledTestViewController
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    [super prepareForSegue:segue sender:sender];
+    REGISTER_CALL();
+}
+
 - (void)prepareForSampleSegue:(UIStoryboardSegue *)segue sender:(id)sender { REGISTER_CALL(); }
 - (void)prepareForAnotherExample2Segue:(UIStoryboardSegue *)segue sender:(id)sender { REGISTER_CALL(); }
 
