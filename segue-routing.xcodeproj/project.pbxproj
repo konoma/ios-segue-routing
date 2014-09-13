@@ -1,0 +1,350 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6357D3FB19C4940C009FDA6D /* segue_routing.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6357D3FA19C4940C009FDA6D /* segue_routing.h */; };
+		6357D3FD19C4940C009FDA6D /* segue_routing.m in Sources */ = {isa = PBXBuildFile; fileRef = 6357D3FC19C4940C009FDA6D /* segue_routing.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		6357D3F519C4940C009FDA6D /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				6357D3FB19C4940C009FDA6D /* segue_routing.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		6357D3F719C4940C009FDA6D /* libsegue-routing.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libsegue-routing.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6357D3FA19C4940C009FDA6D /* segue_routing.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = segue_routing.h; sourceTree = "<group>"; };
+		6357D3FC19C4940C009FDA6D /* segue_routing.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = segue_routing.m; sourceTree = "<group>"; };
+		6357D40219C4940C009FDA6D /* segue-routingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "segue-routingTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6357D40519C4940C009FDA6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6357D3F419C4940C009FDA6D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6357D3FF19C4940C009FDA6D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6357D3EE19C4940B009FDA6D = {
+			isa = PBXGroup;
+			children = (
+				6357D3F919C4940C009FDA6D /* segue-routing */,
+				6357D40319C4940C009FDA6D /* segue-routingTests */,
+				6357D3F819C4940C009FDA6D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6357D3F819C4940C009FDA6D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6357D3F719C4940C009FDA6D /* libsegue-routing.a */,
+				6357D40219C4940C009FDA6D /* segue-routingTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6357D3F919C4940C009FDA6D /* segue-routing */ = {
+			isa = PBXGroup;
+			children = (
+				6357D3FA19C4940C009FDA6D /* segue_routing.h */,
+				6357D3FC19C4940C009FDA6D /* segue_routing.m */,
+			);
+			path = "segue-routing";
+			sourceTree = "<group>";
+		};
+		6357D40319C4940C009FDA6D /* segue-routingTests */ = {
+			isa = PBXGroup;
+			children = (
+				6357D40419C4940C009FDA6D /* Supporting Files */,
+			);
+			path = "segue-routingTests";
+			sourceTree = "<group>";
+		};
+		6357D40419C4940C009FDA6D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6357D40519C4940C009FDA6D /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6357D3F619C4940C009FDA6D /* segue-routing */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6357D40819C4940C009FDA6D /* Build configuration list for PBXNativeTarget "segue-routing" */;
+			buildPhases = (
+				6357D3F319C4940C009FDA6D /* Sources */,
+				6357D3F419C4940C009FDA6D /* Frameworks */,
+				6357D3F519C4940C009FDA6D /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "segue-routing";
+			productName = "segue-routing";
+			productReference = 6357D3F719C4940C009FDA6D /* libsegue-routing.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		6357D40119C4940C009FDA6D /* segue-routingTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6357D40B19C4940C009FDA6D /* Build configuration list for PBXNativeTarget "segue-routingTests" */;
+			buildPhases = (
+				6357D3FE19C4940C009FDA6D /* Sources */,
+				6357D3FF19C4940C009FDA6D /* Frameworks */,
+				6357D40019C4940C009FDA6D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "segue-routingTests";
+			productName = "segue-routingTests";
+			productReference = 6357D40219C4940C009FDA6D /* segue-routingTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6357D3EF19C4940B009FDA6D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "konoma GmbH";
+				TargetAttributes = {
+					6357D3F619C4940C009FDA6D = {
+						CreatedOnToolsVersion = 6.0;
+					};
+					6357D40119C4940C009FDA6D = {
+						CreatedOnToolsVersion = 6.0;
+					};
+				};
+			};
+			buildConfigurationList = 6357D3F219C4940B009FDA6D /* Build configuration list for PBXProject "segue-routing" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 6357D3EE19C4940B009FDA6D;
+			productRefGroup = 6357D3F819C4940C009FDA6D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6357D3F619C4940C009FDA6D /* segue-routing */,
+				6357D40119C4940C009FDA6D /* segue-routingTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6357D40019C4940C009FDA6D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6357D3F319C4940C009FDA6D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6357D3FD19C4940C009FDA6D /* segue_routing.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6357D3FE19C4940C009FDA6D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		6357D40619C4940C009FDA6D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		6357D40719C4940C009FDA6D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6357D40919C4940C009FDA6D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		6357D40A19C4940C009FDA6D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		6357D40C19C4940C009FDA6D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "segue-routingTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		6357D40D19C4940C009FDA6D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "segue-routingTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6357D3F219C4940B009FDA6D /* Build configuration list for PBXProject "segue-routing" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6357D40619C4940C009FDA6D /* Debug */,
+				6357D40719C4940C009FDA6D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6357D40819C4940C009FDA6D /* Build configuration list for PBXNativeTarget "segue-routing" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6357D40919C4940C009FDA6D /* Debug */,
+				6357D40A19C4940C009FDA6D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		6357D40B19C4940C009FDA6D /* Build configuration list for PBXNativeTarget "segue-routingTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6357D40C19C4940C009FDA6D /* Debug */,
+				6357D40D19C4940C009FDA6D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6357D3EF19C4940B009FDA6D /* Project object */;
+}
