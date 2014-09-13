@@ -50,7 +50,7 @@
 		6357D3F719C4940C009FDA6D /* libsegue-routing.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libsegue-routing.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6357D40219C4940C009FDA6D /* segue-routing-tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "segue-routing-tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6357D40519C4940C009FDA6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		63A0C5BF19C494760008EF56 /* SegueRouting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SegueRouting.h; sourceTree = "<group>"; };
+		63A0C5BF19C494760008EF56 /* KNMSegueRouting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KNMSegueRouting.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,7 +106,7 @@
 		6357D3F919C4940C009FDA6D /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				63A0C5BF19C494760008EF56 /* SegueRouting.h */,
+				63A0C5BF19C494760008EF56 /* KNMSegueRouting.h */,
 				6351A38C19C496E60032C4E9 /* UIViewController+KNMSegueRouting.h */,
 				6351A38D19C496E60032C4E9 /* UIViewController+KNMSegueRouting.m */,
 			);

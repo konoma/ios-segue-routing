@@ -24,7 +24,7 @@
  If you override `-prepareForSegue:sender:` in your `UIViewController` subclass, you need
  to call super at some point if you desire the routing behavior.
  
- If you do not want to opt out of the segue routing behavior, override `+knm_supportsSegueRouting`
+ If you want to opt out of the segue routing behavior, override `+knm_supportsSegueRouting`
  and return NO, or alternatively override `-prepareForSegue:sender:` and do not call super.
  */
 @interface UIViewController (KNMSegueRouting)
