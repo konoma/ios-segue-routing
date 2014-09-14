@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "KNMSegueRouting"
-  s.version      = "0.0.1"
+  s.version      = "0.1.0"
   s.homepage     = "https://github.com/konoma/ios-segue-routing"
   s.summary      = "Allow preparing for UIStoryboardSegues using explicit methods"
   s.description  = """
@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
   s.author       = { "Markus Gasser" => "markus.gasser@konoma.ch" }
   
   
-  s.source       = { :git => "git@github.com:konoma/ios-segue-routing.git", :commit => :HEAD }
+  s.source       = { :git => "git@github.com:konoma/ios-segue-routing.git", :tag => '0.1.0' }
 
   s.platform = :ios, '7.0'
   
