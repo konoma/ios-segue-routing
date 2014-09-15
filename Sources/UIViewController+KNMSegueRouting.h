@@ -23,14 +23,29 @@
  
  If you override `-prepareForSegue:sender:` in your `UIViewController` subclass, you need
  to call super at some point if you desire the routing behavior.
- 
- If you want to opt out of the segue routing behavior, override `+knm_supportsSegueRouting`
- and return NO, or alternatively override `-prepareForSegue:sender:` and do not call super.
  */
 @interface UIViewController (KNMSegueRouting)
 
+/**
+ Determines if segue routing is enabled for this class.
+ 
+ By default this returns YES. If you want to opt out of the segue routing behavior, override this method
+ and return NO.
+ 
+ @return Wether segue routing should be supported or not.
+ */
 + (BOOL)knm_supportsSegueRouting;
 
+/**
+ Perform a segue with the given identifier and sender and execute the `configBlock` when preparing for the segue.
+ 
+ The config block is called in `-prepareForSegue:sender:`. If you override `-prepareForSegue:sender:` you need to
+ call super so the config block is executed.
+ 
+ The configuration block is executed before any `-perform<MyIdentifier>Segue:sender:` methods are called.
+ 
+ @param configBlock The block to execute when preparing for the segue
+ */
+- (void)knm_performSegueWithIdentifier:(NSString *)identifier sender:(id)sender configureUsingBlock:(void(^)(UIStoryboardSegue *segue))configBlock;
+
 @end
-
-

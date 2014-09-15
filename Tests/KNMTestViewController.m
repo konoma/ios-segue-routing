@@ -26,6 +26,11 @@
     return self;
 }
 
+- (void)performSegueWithIdentifier:(NSString *)identifier sender:(id)sender
+{
+    // no-op, because we don't have storyboards in tests anyway
+}
+
 - (void)registerCallWithSelector:(SEL)selector segue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     KNMSegueCall *call = [[KNMSegueCall alloc] initWithSelector:selector segue:segue sender:sender];

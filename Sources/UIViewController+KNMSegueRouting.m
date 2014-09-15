@@ -12,6 +12,8 @@
 #import <objc/message.h>
 
 
+static const NSUInteger _KNMSegueConfigurationBlockKey;
+
 #define DISABLE_SEGUE_ROUTING(CLASS)\
     @implementation CLASS (KNMSegueRouting) \
     + (BOOL)knm_supportsSegueRouting { return NO; } \
@@ -54,28 +56,30 @@
 }
 
 
-#pragma mark - Segue Routing
+#pragma mark - Custom -prepareForSegue:sender:
 
 - (void)_knm_prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if (![self _knm_routePreparationForSegue:segue sender:sender]) {
-        [self _knm_prepareForSegue:segue sender:sender]; // call original implementation
-    }
+    [self _knm_executeConfigurationBlockForSegue:segue];
+    [self _knm_routePreparationForSegue:segue sender:sender];
+    [self _knm_prepareForSegue:segue sender:sender]; // call original implementation
 }
 
-- (BOOL)_knm_routePreparationForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+
+#pragma mark - Segue Routing
+
+- (void)_knm_routePreparationForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if (![self.class knm_supportsSegueRouting] || segue.identifier.length == 0) {
-        return NO;
+        return;
     }
     
     SEL preparationSelector = [self _knm_selectorForSegueIdentifier:segue.identifier];
     if (![self respondsToSelector:preparationSelector]) {
-        return NO;
+        return;
     }
     
     ((void (*)(id, SEL, id, id))objc_msgSend)(self, preparationSelector, segue, sender); // call the routed method
-    return YES;
 }
 
 - (SEL)_knm_selectorForSegueIdentifier:(NSString *)identifier
@@ -93,6 +97,44 @@
     
     // create the selector
     return NSSelectorFromString([NSString stringWithFormat:@"prepareFor%@Segue:sender:", identifier]);
+}
+
+
+#pragma mark - Block Configuration for Segues
+
+- (void)knm_performSegueWithIdentifier:(NSString *)identifier sender:(id)sender configureUsingBlock:(void (^)(UIStoryboardSegue *))configBlock
+{
+    if (configBlock != nil) {
+        [self _knm_pushConfigurationBlock:configBlock forSegueWithIdentifier:identifier];
+    }
+    [self performSegueWithIdentifier:identifier sender:sender];
+}
+
+- (void)_knm_executeConfigurationBlockForSegue:(UIStoryboardSegue *)segue
+{
+    // execute a configure block if there is one
+    void (^configurationBlock)(UIStoryboardSegue *) = [self _knm_popConfigurationBlockForSegueWithIdentifier:segue.identifier];
+    if (configurationBlock != nil) {
+        configurationBlock(segue);
+    }
+}
+
+- (void)_knm_pushConfigurationBlock:(void (^)(UIStoryboardSegue *))block forSegueWithIdentifier:(NSString *)identifier
+{
+    NSMutableDictionary *configurationBlocks = objc_getAssociatedObject(self, &_KNMSegueConfigurationBlockKey);
+    if (configurationBlocks == nil) {
+        configurationBlocks = [NSMutableDictionary dictionary];
+        objc_setAssociatedObject(self, &_KNMSegueConfigurationBlockKey, configurationBlocks, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    }
+    configurationBlocks[identifier] = block;
+}
+
+- (void (^)(UIStoryboardSegue *))_knm_popConfigurationBlockForSegueWithIdentifier:(NSString *)identifier
+{
+    NSMutableDictionary *configurationBlocks = objc_getAssociatedObject(self, &_KNMSegueConfigurationBlockKey);
+    id block = configurationBlocks[identifier];
+    [configurationBlocks removeObjectForKey:identifier];
+    return block;
 }
 
 @end

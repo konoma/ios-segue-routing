@@ -28,6 +28,14 @@ You can write this:
         // prepare for 'Show About' segue
     }
 
+Also it allows you to provide a configuration block when performing a segue.
+
+    - (IBAction)showSettings:(id)sender {
+        [self performSegueWithIdentifier:@"Show Settings" sender:sender configureUsingBlock:(UIStoryboardSegue *segue) {
+            // prepare for 'Show Settings' segue
+        }];
+    }
+
 
 ## Installation
 
@@ -39,6 +47,9 @@ Then in your application targets build settings under `Additional Linker Flags` 
 
 
 ## Usage
+
+
+### Segue Routing
 
 In your view controller simply add methods for your segues using the following pattern:
 
@@ -68,6 +79,19 @@ Handle a segue with identifier `push-user-page`:
     - (void)prepareForPushUserPageSegue:(UIStoryboardSegue *)segue sender:(id)sender {
         // prepare for 'push-user-page'
     }
+
+
+### Segue Block Configuration
+
+To configure a segue where you perform it, use `-knm_performSegueWithIdentifier:sender:configureUsingBlock:`
+
+    - (IBAction)showSettings:(id)sender {
+        [self performSegueWithIdentifier:@"Show Settings" sender:sender configureUsingBlock:(UIStoryboardSegue *segue) {
+            // prepare for 'Show Settings' segue
+        }];
+    }
+
+The configuration block is executed before any `-perform<MyIdentifier>Segue:sender:` methods are called.
 
 
 ### Custom logic in `-prepareForSegue:sender:`
