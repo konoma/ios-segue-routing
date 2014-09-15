@@ -13,6 +13,7 @@
 		6351A39319C4A3090032C4E9 /* KNMEnabledTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6351A39219C4A3090032C4E9 /* KNMEnabledTestViewController.m */; };
 		6351A39719C4A4930032C4E9 /* KNMSegueCall.m in Sources */ = {isa = PBXBuildFile; fileRef = 6351A39619C4A4930032C4E9 /* KNMSegueCall.m */; };
 		6351A39A19C4A5220032C4E9 /* KNMTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6351A39919C4A5220032C4E9 /* KNMTestViewController.m */; };
+		63CC257719C6E6DF00C0E4E4 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 63CC257619C6E6DF00C0E4E4 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,9 @@
 		6357D40219C4940C009FDA6D /* segue-routing-tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "segue-routing-tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6357D40519C4940C009FDA6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		63A0C5BF19C494760008EF56 /* KNMSegueRouting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KNMSegueRouting.h; sourceTree = "<group>"; };
+		63CC257419C6E6DF00C0E4E4 /* KNMSegueRouting.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = KNMSegueRouting.podspec; sourceTree = "<group>"; };
+		63CC257519C6E6DF00C0E4E4 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		63CC257619C6E6DF00C0E4E4 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +94,7 @@
 			children = (
 				6357D3F919C4940C009FDA6D /* Sources */,
 				6357D40319C4940C009FDA6D /* Tests */,
+				63CC257319C6E6D500C0E4E4 /* Documentation */,
 				6357D3F819C4940C009FDA6D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -121,6 +126,16 @@
 				6351A39419C4A31A0032C4E9 /* Helper Classes */,
 			);
 			path = Tests;
+			sourceTree = "<group>";
+		};
+		63CC257319C6E6D500C0E4E4 /* Documentation */ = {
+			isa = PBXGroup;
+			children = (
+				63CC257419C6E6DF00C0E4E4 /* KNMSegueRouting.podspec */,
+				63CC257519C6E6DF00C0E4E4 /* LICENSE */,
+				63CC257619C6E6DF00C0E4E4 /* README.md */,
+			);
+			name = Documentation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,6 +227,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63CC257719C6E6DF00C0E4E4 /* README.md in Sources */,
 				6351A38E19C496E60032C4E9 /* UIViewController+KNMSegueRouting.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
