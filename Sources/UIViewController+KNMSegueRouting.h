@@ -21,6 +21,10 @@
  If a matching method is found, it is invoked and `-prepareForSegue:sender:` returns.
  Otherwise the original implementation is called.
  
+ If the segue identifier is a special identifier looking like this: `@connect(myProperty)`
+ it will write the destination view controller to the `myProperty` property of the calling
+ controller. `myProperty` must be KVC compliant for this to work.
+ 
  If you override `-prepareForSegue:sender:` in your `UIViewController` subclass, you need
  to call super at some point if you desire the routing behavior.
  */

@@ -28,7 +28,20 @@ You can write this:
         // prepare for 'Show About' segue
     }
 
-Also it allows you to provide a configuration block when performing a segue.
+
+# Connecting the Destination Controller to the Caller
+
+There is a shortcut to inject the destination view controller as a property on the calling controller.
+This especially useful for embed segues, since you cannot have an outlet to your child view controller.
+
+For this you set the identifier of the segue to the following: `@connect(<#myProperty#>)`. For example the
+segue with the identifier `@connect(someChildViewController)` will save its `destinationViewController` to
+the `someChildViewController` property of the calling view controller.
+
+
+# Segue Configuration using Blocks
+
+You can provide a configuration block when performing a segue.
 
     - (IBAction)showSettings:(id)sender {
         [self knm_performSegueWithIdentifier:@"Show Settings" sender:sender configureUsingBlock:(UIStoryboardSegue *segue) {
@@ -41,7 +54,7 @@ Also it allows you to provide a configuration block when performing a segue.
 
 When using [Cocoapods](http://cocoapods.org) add the following to your `Podfile`:
 
-    pod 'KNMSegueRouting', '~> 0.2'
+    pod 'KNMSegueRouting', '~> 0.3'
 
 Then in your application targets build settings under `Additional Linker Flags` add `-ObjC` so the category is recognized.
 
@@ -63,7 +76,8 @@ The rules to symbolify the segue name are as follows:
 2. Capitalize the first character of all resulting parts
 3. Concatenate the parts
 
-So a segue with identifier `some overly-complicated identifier_name 2` becomes `SomeOverlyComplicatedIdentifier_name2` and would get routed to `-prepareForSomeOverlyComplicatedIdentifier_name2Segue:sender:`
+So a segue with identifier `some overly-complicated identifier_name 2` becomes `SomeOverlyComplicatedIdentifier_name2`
+and would get routed to `-prepareForSomeOverlyComplicatedIdentifier_name2Segue:sender:`
 
 
 ### Examples
@@ -96,4 +110,5 @@ The configuration block is executed before any `-perform<MyIdentifier>Segue:send
 
 ### Custom logic in `-prepareForSegue:sender:`
 
-This category overrides `-prepareForSegue:sender:` to implement the routing. If you need to override this method in your view controller for some reason and still need the routing behavior, you need to make sure you call `[super prepareForSegue:segue sender:sender]`.
+This category overrides `-prepareForSegue:sender:` to implement the routing. If you need to override this method in your view controller for some reason and
+still need the routing behavior, you need to make sure you call `[super prepareForSegue:segue sender:sender]`.
