@@ -13,7 +13,6 @@
 		6351A39319C4A3090032C4E9 /* KNMEnabledTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6351A39219C4A3090032C4E9 /* KNMEnabledTestViewController.m */; };
 		6351A39719C4A4930032C4E9 /* KNMSegueCall.m in Sources */ = {isa = PBXBuildFile; fileRef = 6351A39619C4A4930032C4E9 /* KNMSegueCall.m */; };
 		6351A39A19C4A5220032C4E9 /* KNMTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6351A39919C4A5220032C4E9 /* KNMTestViewController.m */; };
-		63CC257719C6E6DF00C0E4E4 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 63CC257619C6E6DF00C0E4E4 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -227,7 +226,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				63CC257719C6E6DF00C0E4E4 /* README.md in Sources */,
 				6351A38E19C496E60032C4E9 /* UIViewController+KNMSegueRouting.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -281,6 +279,7 @@
 					"$(inherited)",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -315,6 +314,7 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;

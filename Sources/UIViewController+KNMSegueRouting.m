@@ -20,6 +20,18 @@ static const NSUInteger _KNMSegueConfigurationBlockKey;
     @end
 
 
+static NSString* FirstLetterCapitalizedString(NSString *string)
+{
+    if (string.length == 0) {
+        return string;
+    }
+    
+    NSString *head = [string substringToIndex:1];
+    NSString *tail = [string substringFromIndex:1];
+    return [[head uppercaseString] stringByAppendingString:tail];
+}
+
+
 @implementation UIViewController (KNMSegueRouting)
 
 #pragma mark - Initialization
@@ -75,7 +87,7 @@ static const NSUInteger _KNMSegueConfigurationBlockKey;
     }
     
     SEL preparationSelector = [self _knm_selectorForSegueIdentifier:segue.identifier];
-    if (![self respondsToSelector:preparationSelector]) {
+    if (preparationSelector == NULL || ![self respondsToSelector:preparationSelector]) {
         return;
     }
     
@@ -92,11 +104,16 @@ static const NSUInteger _KNMSegueConfigurationBlockKey;
     });
     
     // sanitize the identifier
-    identifier = [identifier capitalizedString];
-    identifier = [[identifier componentsSeparatedByCharactersInSet:forbiddenChars] componentsJoinedByString:@""];
+    NSMutableString *sanitizedIdentifier = [NSMutableString string];
+    NSArray *identifierParts = [identifier componentsSeparatedByCharactersInSet:forbiddenChars];
+    for (NSString *part in identifierParts) {
+        [sanitizedIdentifier appendString:FirstLetterCapitalizedString(part)];
+    }
     
     // create the selector
-    return NSSelectorFromString([NSString stringWithFormat:@"prepareFor%@Segue:sender:", identifier]);
+    return (sanitizedIdentifier.length > 0
+            ? NSSelectorFromString([NSString stringWithFormat:@"prepareFor%@Segue:sender:", sanitizedIdentifier])
+            : NULL);
 }
 
 

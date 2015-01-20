@@ -38,8 +38,7 @@
     
     [enabledViewController prepareForSegue:segue sender:sender];
     
-    XCTAssert([enabledViewController hasRegisteredCallWithSelector:@selector(prepareForSampleSegue:sender:)
-                                                             segue:segue sender:sender],
+    XCTAssert([enabledViewController hasRegisteredCallWithSelector:@selector(prepareForSampleSegue:sender:) segue:segue sender:sender],
               @"Should have routed the segue");
 }
 
@@ -50,8 +49,40 @@
     
     [enabledViewController prepareForSegue:segue sender:sender];
     
-    XCTAssert([enabledViewController hasRegisteredCallWithSelector:@selector(prepareForSegue:sender:)
-                                                             segue:segue sender:sender],
+    XCTAssert([enabledViewController hasRegisteredCallWithSelector:@selector(prepareForSegue:sender:) segue:segue sender:sender],
+              @"Should have routed the segue");
+}
+
+- (void)testRoutingOfSeguesWithSparseCamelCaseNames
+{
+    UIStoryboardSegue *segue = [[UIStoryboardSegue alloc] initWithIdentifier:@"Camel Case Sample" source:[UIViewController new] destination:[UIViewController new]];
+    id sender = @"Foo";
+    
+    [enabledViewController prepareForSegue:segue sender:sender];
+    
+    XCTAssert([enabledViewController hasRegisteredCallWithSelector:@selector(prepareForCamelCaseSampleSegue:sender:) segue:segue sender:sender],
+              @"Should have routed the segue");
+}
+
+- (void)testRoutingOfSeguesWithCompactCamelCaseNames
+{
+    UIStoryboardSegue *segue = [[UIStoryboardSegue alloc] initWithIdentifier:@"CamelCaseSample" source:[UIViewController new] destination:[UIViewController new]];
+    id sender = @"Foo";
+    
+    [enabledViewController prepareForSegue:segue sender:sender];
+    
+    XCTAssert([enabledViewController hasRegisteredCallWithSelector:@selector(prepareForCamelCaseSampleSegue:sender:) segue:segue sender:sender],
+              @"Should have routed the segue");
+}
+
+- (void)testRoutingOfSeguesWithSeparatedNames
+{
+    UIStoryboardSegue *segue = [[UIStoryboardSegue alloc] initWithIdentifier:@"camel-case-sample" source:[UIViewController new] destination:[UIViewController new]];
+    id sender = @"Foo";
+    
+    [enabledViewController prepareForSegue:segue sender:sender];
+    
+    XCTAssert([enabledViewController hasRegisteredCallWithSelector:@selector(prepareForCamelCaseSampleSegue:sender:) segue:segue sender:sender],
               @"Should have routed the segue");
 }
 

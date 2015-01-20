@@ -21,6 +21,6 @@
 }
 
 - (void)prepareForSampleSegue:(UIStoryboardSegue *)segue sender:(id)sender { REGISTER_CALL(); }
-- (void)prepareForAnotherExample2Segue:(UIStoryboardSegue *)segue sender:(id)sender { REGISTER_CALL(); }
+- (void)prepareForCamelCaseSampleSegue:(UIStoryboardSegue *)segue sender:(id)sender { REGISTER_CALL(); }
 
 @end

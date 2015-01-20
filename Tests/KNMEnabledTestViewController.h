@@ -12,6 +12,6 @@
 @interface KNMEnabledTestViewController : KNMTestViewController
 
 - (void)prepareForSampleSegue:(UIStoryboardSegue *)segue sender:(id)sender;
-- (void)prepareForAnotherExample2Segue:(UIStoryboardSegue *)segue sender:(id)sender;
+- (void)prepareForCamelCaseSampleSegue:(UIStoryboardSegue *)segue sender:(id)sender;
 
 @end
