@@ -31,7 +31,7 @@ You can write this:
 Also it allows you to provide a configuration block when performing a segue.
 
     - (IBAction)showSettings:(id)sender {
-        [self performSegueWithIdentifier:@"Show Settings" sender:sender configureUsingBlock:(UIStoryboardSegue *segue) {
+        [self knm_performSegueWithIdentifier:@"Show Settings" sender:sender configureUsingBlock:(UIStoryboardSegue *segue) {
             // prepare for 'Show Settings' segue
         }];
     }
@@ -41,7 +41,7 @@ Also it allows you to provide a configuration block when performing a segue.
 
 When using [Cocoapods](http://cocoapods.org) add the following to your `Podfile`:
 
-    pod 'KNMSegueRouting', '~> 0.1'
+    pod 'KNMSegueRouting', '~> 0.2'
 
 Then in your application targets build settings under `Additional Linker Flags` add `-ObjC` so the category is recognized.
 
@@ -86,7 +86,7 @@ Handle a segue with identifier `push-user-page`:
 To configure a segue where you perform it, use `-knm_performSegueWithIdentifier:sender:configureUsingBlock:`
 
     - (IBAction)showSettings:(id)sender {
-        [self performSegueWithIdentifier:@"Show Settings" sender:sender configureUsingBlock:(UIStoryboardSegue *segue) {
+        [self knm_performSegueWithIdentifier:@"Show Settings" sender:sender configureUsingBlock:(UIStoryboardSegue *segue) {
             // prepare for 'Show Settings' segue
         }];
     }
