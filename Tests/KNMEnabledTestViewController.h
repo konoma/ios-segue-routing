@@ -11,7 +11,10 @@
 
 @interface KNMEnabledTestViewController : KNMTestViewController
 
+@property (nonatomic, strong) UIViewController *destinationController;
+
 - (void)prepareForSampleSegue:(UIStoryboardSegue *)segue sender:(id)sender;
 - (void)prepareForCamelCaseSampleSegue:(UIStoryboardSegue *)segue sender:(id)sender;
+- (void)prepareForConnectDestinationControllerSegue:(UIStoryboardSegue *)segue sender:(id)sender;
 
 @end

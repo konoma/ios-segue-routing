@@ -8,9 +8,6 @@
 
 #import "KNMEnabledTestViewController.h"
 
-@interface KNMEnabledTestViewController ()
-
-@end
 
 @implementation KNMEnabledTestViewController
 
@@ -22,5 +19,6 @@
 
 - (void)prepareForSampleSegue:(UIStoryboardSegue *)segue sender:(id)sender { REGISTER_CALL(); }
 - (void)prepareForCamelCaseSampleSegue:(UIStoryboardSegue *)segue sender:(id)sender { REGISTER_CALL(); }
+- (void)prepareForConnectDestinationControllerSegue:(UIStoryboardSegue *)segue sender:(id)sender { REGISTER_CALL(); }
 
 @end

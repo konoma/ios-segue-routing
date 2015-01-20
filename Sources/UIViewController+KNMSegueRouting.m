@@ -72,8 +72,10 @@ static NSString* FirstLetterCapitalizedString(NSString *string)
 
 - (void)_knm_prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
+    [self _knm_connectDestinationControllerForSegue:segue];
     [self _knm_executeConfigurationBlockForSegue:segue];
     [self _knm_routePreparationForSegue:segue sender:sender];
+    
     [self _knm_prepareForSegue:segue sender:sender]; // call original implementation
 }
 
@@ -152,6 +154,22 @@ static NSString* FirstLetterCapitalizedString(NSString *string)
     id block = configurationBlocks[identifier];
     [configurationBlocks removeObjectForKey:identifier];
     return block;
+}
+
+
+#pragma mark - Connecting the Destination Controller
+
+- (void)_knm_connectDestinationControllerForSegue:(UIStoryboardSegue *)segue
+{
+    if (![self.class knm_supportsSegueRouting]
+        || ![segue.identifier hasPrefix:@"@connect("]
+        || ![segue.identifier hasSuffix:@")"]
+        || segue.identifier.length <= 10) {
+        return;
+    }
+    
+    NSString *propertyName = [segue.identifier substringWithRange:NSMakeRange(9, (segue.identifier.length - 10))];
+    [self setValue:segue.destinationViewController forKey:propertyName];
 }
 
 @end

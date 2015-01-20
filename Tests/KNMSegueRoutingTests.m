@@ -102,4 +102,32 @@
     XCTAssertEqualObjects(configuredSegue.identifier, @"Sample");
 }
 
+
+#pragma mark - Connecting Source and Destination View Controllers
+
+- (void)testThatTheDestinationIsPassedToTheCallerForConnectSegues
+{
+    NSString *identifier = @"@connect(destinationController)"; // special segue name to notify we want to connect
+    UIViewController *destinationController = [[UIViewController alloc] init];
+    UIStoryboardSegue *segue = [[UIStoryboardSegue alloc] initWithIdentifier:identifier source:[UIViewController new] destination:destinationController];
+    id sender = @"Foo";
+    
+    [enabledViewController prepareForSegue:segue sender:sender];
+    
+    XCTAssert(enabledViewController.destinationController == destinationController, @"Should have set the controller property");
+}
+
+- (void)testThatConnectSeguePerformsPreparationCall
+{
+    NSString *identifier = @"@connect(destinationController)"; // special segue name to notify we want to connect
+    UIStoryboardSegue *segue = [[UIStoryboardSegue alloc] initWithIdentifier:identifier source:[UIViewController new] destination:[UIViewController new]];
+    id sender = @"Foo";
+    
+    [enabledViewController prepareForSegue:segue sender:sender];
+    
+    // naming of prepare segue is as for other segues
+    XCTAssert([enabledViewController hasRegisteredCallWithSelector:@selector(prepareForConnectDestinationControllerSegue:sender:) segue:segue sender:sender],
+              @"Should have routed the segue");
+}
+
 @end
